@@ -1,0 +1,3 @@
+[tracks]
+sim="ConstantField.xml"
+output="ConstantField.root"
