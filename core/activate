@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# You MUST source this file as it exports path variables needed
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+export PATH="$PATH:$DIR"
+
+# Modify these variables to your locations (these are valid for anyone on the whisper station)
+
+export ANSYSEDT='/home/arallen4/.opt/usr/local/ansys/AnsysEM19.4/Linux64/ansysedt'
+export KS='/home/arallen4/CRES/Kassiopeia/install/bin/Kassiopeia'
+export MATLAB='/home/arallen4/.opt/usr/local/matlab/bin/matlab'
+

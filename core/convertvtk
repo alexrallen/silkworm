@@ -1,0 +1,121 @@
+#!/usr/bin/env python
+
+# Convert ansys file to vtk for input to Kassiopeia
+# Code pulled from ./Kassiopeia/KEMField/Source/Plugins/VTKPart2/src/KElectrostaticPotentialmap.cc
+
+import math
+import vtk
+import sys
+import os
+
+from tqdm import tqdm
+
+if len(sys.argv) < 3:
+    print("Syntax: convertvtk [EFIELD_FILE | -] [VOLTAGE_FILE | -]")
+    quit()
+
+if os.path.isfile("output.vti"):
+
+    reader = vtk.vtkXMLImageDataReader()
+    reader.SetFileName("output.vti")
+    reader.Update()
+
+    grid = reader.GetOutput()
+
+    dim = grid.GetDimensions()
+    numberOfPoints = dim[0]*dim[1]*dim[2]
+
+    valid = grid.GetPointData().GetArray('validity')
+    potential = grid.GetPointData().GetArray('electric potential')
+    field = grid.GetPointData().GetArray('electric field')
+
+else:
+
+    # Range output parameters from ANSYS
+    r = [(-10e-3, 10e-3, 0.1e-3),	# X
+         (-10e-3, 10e-3, 0.1e-3),	# Y
+         (-300e-3, 300e-3, 0.1e-3)]	# Z
+
+    grid = vtk.vtkImageData()
+
+    #X Y Z Size of space being used
+    grid.SetDimensions(math.ceil((r[0][1] - r[0][0])/r[0][2]) + 1,
+                       math.ceil((r[1][1] - r[1][0])/r[1][2]) + 1,
+                       math.ceil((r[2][1] - r[2][0])/r[2][2]) + 1)
+
+    #Bottom left location of cube being loaded (origin in Kassiopeia will be in center of this cube)
+    grid.SetOrigin(r[0][0], r[1][0], r[2][0])
+
+    #Distance between points (this is a setting in Ansys export)
+    grid.SetSpacing(r[0][2], r[1][2], r[2][2])
+
+    numberOfPoints = (((r[0][1] - r[0][0])/r[0][2]) + 1) * \
+                     (((r[1][1] - r[1][0])/r[1][2]) + 1) * \
+                     (((r[2][1] - r[2][0])/r[2][2]) + 1)
+
+    numberOfPoints = math.ceil(numberOfPoints)
+
+    valid = vtk.vtkIntArray()
+    valid.SetName("validity")
+    valid.SetNumberOfComponents(1)
+    valid.SetNumberOfTuples(numberOfPoints)
+    grid.GetPointData().AddArray(valid)
+
+    potential = vtk.vtkDoubleArray()
+    potential.SetName("electric potential")
+    potential.SetNumberOfComponents(1)
+    potential.SetNumberOfTuples(numberOfPoints)
+    grid.GetPointData().AddArray(potential)
+
+    field = vtk.vtkDoubleArray()
+    field.SetName("electric field")
+    field.SetNumberOfComponents(3)
+    field.SetNumberOfTuples(numberOfPoints)
+    grid.GetPointData().AddArray(field)
+
+    # Init Valid to Zero
+    valid.FillComponent(0, 0)
+
+if sys.argv[1] != "-":
+    # For loops doing the following
+    with open(sys.argv[1], "r") as f:
+        next(f) # Skip grid def
+        next(f) # Skip column headers
+        for l in tqdm(f, total=numberOfPoints):
+            if len(l.split("  ")) < 2: continue
+            try:
+                loc = [float(d) for d in l.split("  ")[0].split(" ")]
+                ef = tuple([float(d) for d in l.split("  ")[1].split(" ")])
+            except ValueError as e:
+                pass
+            if len(loc) < 3 or len(ef) < 3: continue 
+            N = grid.FindPoint((loc[0], loc[1], loc[2]))
+            if(N < 0): continue
+            valid.SetTuple(N, (1,))
+            potential.SetTuple(N, (0,))
+            field.SetTuple(N, ef)
+
+if sys.argv[2] != "-":
+    # For loops doing the following
+    with open(sys.argv[2], "r") as f:
+        next(f) # Skip grid def
+        next(f) # Skip column headers
+        for l in tqdm(f, total=numberOfPoints):
+            if len(l.split("  ")) < 2: continue
+            try:
+                loc = [float(d) for d in l.split("  ")[0].split(" ")]
+                v = (float(l.split("  ")[1]),)
+            except ValueError as e:
+                pass
+            if len(loc) < 3: continue
+            N = grid.FindPoint((loc[0], loc[1], loc[2]))
+            if(N < 0): continue
+            valid.SetTuple(N, (2,))
+            potential.SetTuple(N, v)
+
+# Write the data
+writer = vtk.vtkXMLImageDataWriter()
+writer.SetFileName("output.vti")
+writer.SetInputData(grid)
+writer.SetDataModeToBinary()
+writer.Write()

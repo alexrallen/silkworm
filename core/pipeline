@@ -1,0 +1,96 @@
+#!/usr/bin/env python
+
+import argparse
+import subprocess
+import toml
+
+from os import path, listdir, makedirs
+
+# Load arguments
+parser = argparse.ArgumentParser(description="Run particle physics analysis pipeline.")
+parser.add_argument('--fields', action='store_true')
+parser.add_argument('--tracks', action='store_true')
+parser.add_argument('file')
+args = parser.parse_args()
+
+# Load toml config
+config = None
+
+try:
+	with open(args.file, "r") as f:
+		config = toml.load(f)
+except IOError as err:
+	print("Config file not found")
+	quit()
+
+working_dir = path.realpath(path.split(args.file)[0])
+script_dir = path.split(path.realpath(__file__))[0]
+
+### Ansys pipeline
+
+# Do we have fields in this pipeline?
+if "fields" in config:
+	# Check if we need to regen the sim
+	if (not path.exists(path.join(working_dir, "fields"))) or args.fields:
+		# Create the dir if it doesn't exist
+		img_dir = path.join(working_dir, "fields")
+		if not path.exists(img_dir):
+			makedirs(img_dir)
+		# Run field simulation
+		print("Executing Ansys Simulation")
+		subprocess.call("$ANSYSEDT -ng -RunScriptAndExit {} {}".format(
+				path.join(working_dir, config["fields"]["script"]),
+				path.join(working_dir, config["fields"]["project"])),
+				cwd=path.join(working_dir, "fields"),
+				shell=True)
+
+		print("Generating VTK field file")
+		# Generate vtk file
+		subprocess.call("convertvtk efield.fld voltage.fld", shell=True,
+				cwd=path.join(working_dir, "fields"))
+		
+
+### Kassiopeia pipeline
+
+# DO we have particle sims in this pipeline?
+if "tracks" in config:
+	# Check if we need to regen the sim
+	if (not path.exists(path.join(working_dir, "tracks"))) or args.tracks:
+		# Create the dir if it doesn't exist
+		img_dir = path.join(working_dir, "tracks")
+		if not path.exists(img_dir):
+			makedirs(img_dir)
+		# Run track simulation
+		print("Executing Kassiopiea Simulation")
+		subprocess.call("$KS {}".format(
+				path.join(working_dir, config["tracks"]["sim"])),
+				cwd=path.join(working_dir, "tracks"),
+				shell=True)
+
+		print("Generating csv data files")
+		# Generate csv file
+		subprocess.call("process {} {}".format(config["tracks"]["output"],"sim"),
+				cwd=path.join(working_dir, "tracks"),
+				shell=True)
+
+### Matlab pipeline
+
+# Get all matlab files in working directory...
+for fn in listdir(path.join(working_dir, "matlab")):
+	# Execute the matlab script
+	# Note will automatically add needed paths to working dir
+	# Must export images to ./img/
+	
+	# Make image dir if needed
+	img_dir = path.join(working_dir, "img")
+	if not path.exists(img_dir):
+    		makedirs(img_dir)
+
+	print("Running matlab script {}".format(fn))
+	# Run matlab
+	subprocess.call("$MATLAB -nodisplay -nosplash -nodesktop -r \"addpath('{}'); {}; exit\"".format(
+			path.join(script_dir, "matlab"),
+			fn.split(".")[0]),
+			shell=True,
+			cwd=path.join(working_dir, "matlab"))
+

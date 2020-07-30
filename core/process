@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+import sys
+
+from rootpy.tree import Tree
+from rootpy.io import root_open
+
+if len(sys.argv) < 3:
+	print("Syntax: process [ROOT_FILE] [NAME]")
+
+f = root_open(sys.argv[1])
+name = sys.argv[2]
+
+track = f.get('component_track_world_DATA')
+step = f.get('component_step_world_DATA')
+step_map = f.get('TRACK_DATA')
+
+step_map.csv(stream=open('{}_map.csv'.format(name), 'w'))
+track.csv(stream=open('{}_track.csv'.format(name), 'w'))
+step.csv(stream=open('{}_step.csv'.format(name), 'w'))
+
+
