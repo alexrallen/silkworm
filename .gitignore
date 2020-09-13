@@ -3,3 +3,10 @@
 *.vtk
 *.fld
 *.aedtresults
+TrappingFieldLog.txt
+*.batchinfo
+*.log
+fields
+img
+tracks
+
