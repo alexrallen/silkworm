@@ -8,8 +8,6 @@ import vtk
 import sys
 import os
 
-from tqdm import tqdm
-
 if len(sys.argv) < 3:
     print("Syntax: convertvtk [EFIELD_FILE | -] [VOLTAGE_FILE | -]")
     quit()
@@ -39,9 +37,9 @@ else:
     grid = vtk.vtkImageData()
 
     #X Y Z Size of space being used
-    grid.SetDimensions(math.ceil((r[0][1] - r[0][0])/r[0][2]) + 1,
-                       math.ceil((r[1][1] - r[1][0])/r[1][2]) + 1,
-                       math.ceil((r[2][1] - r[2][0])/r[2][2]) + 1)
+    grid.SetDimensions(int(math.ceil((r[0][1] - r[0][0])/r[0][2])) + 1,
+                       int(math.ceil((r[1][1] - r[1][0])/r[1][2])) + 1,
+                       int(math.ceil((r[2][1] - r[2][0])/r[2][2])) + 1)
 
     #Bottom left location of cube being loaded (origin in Kassiopeia will be in center of this cube)
     grid.SetOrigin(r[0][0], r[1][0], r[2][0])
@@ -53,7 +51,7 @@ else:
                      (((r[1][1] - r[1][0])/r[1][2]) + 1) * \
                      (((r[2][1] - r[2][0])/r[2][2]) + 1)
 
-    numberOfPoints = math.ceil(numberOfPoints)
+    numberOfPoints = int(math.ceil(numberOfPoints))
 
     valid = vtk.vtkIntArray()
     valid.SetName("validity")
@@ -81,7 +79,7 @@ if sys.argv[1] != "-":
     with open(sys.argv[1], "r") as f:
         next(f) # Skip grid def
         next(f) # Skip column headers
-        for l in tqdm(f, total=numberOfPoints):
+        for l in f:
             if len(l.split("  ")) < 2: continue
             try:
                 loc = [float(d) for d in l.split("  ")[0].split(" ")]
@@ -100,7 +98,7 @@ if sys.argv[2] != "-":
     with open(sys.argv[2], "r") as f:
         next(f) # Skip grid def
         next(f) # Skip column headers
-        for l in tqdm(f, total=numberOfPoints):
+        for l in f:
             if len(l.split("  ")) < 2: continue
             try:
                 loc = [float(d) for d in l.split("  ")[0].split(" ")]

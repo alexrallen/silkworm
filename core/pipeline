@@ -38,7 +38,11 @@ if "fields" in config:
 			makedirs(img_dir)
 		# Run field simulation
 		print("Executing Ansys Simulation")
-		subprocess.call("$ANSYSEDT -ng -RunScriptAndExit {} {}".format(
+		subprocess.call("$ANSYSEDT -ng -BatchSolve {}".format(
+				path.join(working_dir, config["fields"]["project"])),
+				cwd=path.join(working_dir, "fields"),
+				shell=True)
+		subprocess.call("$ANSYSEDT -RunScriptAndExit {} {}".format(
 				path.join(working_dir, config["fields"]["script"]),
 				path.join(working_dir, config["fields"]["project"])),
 				cwd=path.join(working_dir, "fields"),

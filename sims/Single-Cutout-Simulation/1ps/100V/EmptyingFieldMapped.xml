@@ -99,6 +99,7 @@
 	
     <ksfield_electric_potentialmap
         name="electric_mapped"
+	directory="../fields"
         file="output.vti"
         interpolation="linear"
     >
@@ -188,7 +189,7 @@
 
     <!-- writers -->
 
-    <kswrite_root name="write_root" base="EmptyingFieldMapped.root"/>
+    <kswrite_root path="." name="write_root" base="EmptyingFieldMapped.root"/>
 
     <!-- output -->
 

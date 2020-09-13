@@ -1,0 +1,9 @@
+[fields]
+project="ansys.aedt"
+script="exportToFile.py"
+
+[tracks]
+sim="EmptyingFieldMapped.xml"
+output="EmptyingFieldMapped.root"
+
+
