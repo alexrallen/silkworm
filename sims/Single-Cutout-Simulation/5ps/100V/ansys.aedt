@@ -30,9 +30,6 @@ $begin 'AnsoftProject'
 	$begin 'NexximNetlistEnvironment'
 		Version(1, 0)
 	$end 'NexximNetlistEnvironment'
-	$begin 'EmitEnvironment'
-		Version(1, 0)
-	$end 'EmitEnvironment'
 	$begin 'Maxwell3DEnvironment'
 		Version(1, 0)
 	$end 'Maxwell3DEnvironment'
@@ -45,9 +42,6 @@ $begin 'AnsoftProject'
 	$begin 'MaxCirEnvironment'
 		Version(1, 0)
 	$end 'MaxCirEnvironment'
-	$begin 'SimplorerEnvironment'
-		Version(1, 0)
-	$end 'SimplorerEnvironment'
 	$begin 'IcepakEnvironment'
 		Version(1, 0)
 	$end 'IcepakEnvironment'
@@ -92,8 +86,6 @@ $begin 'AnsoftProject'
 			Symbols(1604, 9001, 10, 103, 1, false, false)
 			Footprints(1604, 9002, 11, 104, 1, false, false)
 			Components(1604, 9000, 8, 102, 1, false, false)
-			Models(1604, 9004, 13, 106, 1, false, false)
-			Packages(1604, 9005, 33502, 107, 1, false, false)
 		$end 'Folders'
 		$begin 'Materials'
 			$begin 'vacuum'
@@ -658,7 +650,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(-6.20259555970465, -2.15875, 2.53744021986631e-16)
+															FcUVMid(-6.20259555970467, -2.15875, 2.53744021986635e-16)
 															$begin 'FcTolVts'
 																TolVt(-7.0485, 0, -2.15875, 0)
 																TolVt(-7.0485, 0, 2.15875, 0)
@@ -709,7 +701,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(6.20259555970471, -2.15875, -2.17109918551429e-15)
+															FcUVMid(6.20259555970466, -2.15875, -1.21242160375046e-15)
 															$begin 'FcTolVts'
 																TolVt(7.0485, 0, 2.15875, 0)
 																TolVt(7.0485, 0, -2.15875, 0)
@@ -3222,6 +3214,8 @@ $begin 'AnsoftProject'
 		$begin 'PortFieldDisplay'
 			$begin 'PortFieldDisplay'
 				ScaleFactor=5
+				Solution='Setup : LastAdaptive'
+				Frequency='18.5GHz'
 			$end 'PortFieldDisplay'
 		$end 'PortFieldDisplay'
 		$begin 'FieldsReporter'
@@ -3231,6 +3225,8 @@ $begin 'AnsoftProject'
 			$begin 'PlotDefaults'
 				Default_SolutionId=51
 				Default_PlotFolder='Automatic'
+				Default_Freq='18.5GHz'
+				Default_Phase='0deg'
 			$end 'PlotDefaults'
 			$begin 'FieldsPlotManagerID'
 				NextUniqueID=2
@@ -3250,16 +3246,16 @@ $begin 'AnsoftProject'
 					$begin 'Scale3DSettings'
 						unit=154
 						m_nLevels=15
-						minvalue=0.0482862666249275
-						maxvalue=5249.08544921875
+						minvalue=0.0532270781695843
+						maxvalue=5602.5048828125
 						log=false
-						IntrinsicMin=0.0482862666249275
-						IntrinsicMax=5249.08544921875
+						IntrinsicMin=0.0532270781695843
+						IntrinsicMax=5602.5048828125
 						LimitFieldValuePrecision=false
 						FieldValuePrecisionDigits=4
 						dB=false
 						ScaleType=0
-						UserSpecifyValues(16, 0.840929388999939, 182.55419921875, 364.267486572266, 545.980773925781, 727.694030761719, 909.407287597656, 1091.12060546875, 1272.83386230469, 1454.54711914063, 1636.26037597656, 1817.9736328125, 1999.68688964844, 2181.40014648438, 2363.11328125, 2544.82666015625, 2726.53979492188)
+						UserSpecifyValues(16, 0.840929388999939, 182.55419921875, 364.267486572266, 545.980773925781, 727.694030761719, 909.407287597656, 1091.12060546875, 1272.83386230469, 1454.54711914062, 1636.26037597656, 1817.9736328125, 1999.68688964844, 2181.40014648438, 2363.11328125, 2544.82666015625, 2726.53979492188)
 						ValueNumberFormatTypeAuto=0
 						ValueNumberFormatTypeScientific=false
 						ValueNumberFormatWidth=9
@@ -3281,8 +3277,8 @@ $begin 'AnsoftProject'
 						ArrowMaxMagnitude=2727.03979492188
 						ArrowMagnitudeThreshold=0.340929388999939
 						ArrowMagnitudeFilteringFlag=false
-						ArrowMinIntrinsicMagnitude=-0.451713733375072
-						ArrowMaxIntrinsicMagnitude=5249.58544921875
+						ArrowMinIntrinsicMagnitude=-0.446772921830416
+						ArrowMaxIntrinsicMagnitude=5603.0048828125
 					$end 'Arrow3DSettings'
 					$begin 'DeformScaleSettings'
 						ShowDeformation=true
@@ -3297,7 +3293,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E1'
 					PlotDefinitionId=0
-					VersionID=0
+					VersionID=38
 					SolutionId=51
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -3331,7 +3327,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E2'
 					PlotDefinitionId=1
-					VersionID=0
+					VersionID=38
 					SolutionId=51
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -3519,6 +3515,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
@@ -3527,6 +3553,8 @@ $begin 'AnsoftProject'
 					ID=56
 					Name='Sweep'
 					$begin 'SimDataExtractor'
+						SimValue('S(1:1,2:1)', 2, 90, false, SimValueID=801, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+						SimValue('S(1:2,2:2)', 2, 90, false, SimValueID=802, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'Sweep'
 								Variable='Freq'
@@ -3569,6 +3597,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
@@ -3606,7 +3664,7 @@ $begin 'AnsoftProject'
 		Notes=$begin_cdata$ $end_cdata$
 		$begin 'AnimationSetups'
 		$end 'AnimationSetups'
-		CacheHeaderFile='HDR114E363215999801673.tmp'
+		CacheHeaderFile='HDR5QBNV52839015999710225.tmp'
 	$end 'HFSSModel'
 	$begin 'Maxwell3DModel'
 		RepRewriteV2=true
@@ -4028,7 +4086,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(-6.20259555970465, -2.15875, 2.53744021986631e-16)
+															FcUVMid(-6.20259555970467, -2.15875, 2.53744021986635e-16)
 															$begin 'FcTolVts'
 																TolVt(-7.0485, 0, -2.15875, 0)
 																TolVt(-7.0485, 0, 2.15875, 0)
@@ -4079,7 +4137,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(6.20259555970471, -2.15875, -2.17109918551429e-15)
+															FcUVMid(6.20259555970466, -2.15875, -1.21242160375046e-15)
 															$begin 'FcTolVts'
 																TolVt(7.0485, 0, 2.15875, 0)
 																TolVt(7.0485, 0, -2.15875, 0)
@@ -5919,7 +5977,7 @@ $begin 'AnsoftProject'
 					IsComponent=false
 					Objects(909)
 					ParentBndID=-1
-					Voltage='100V'
+					Voltage='1000V'
 					CoordinateSystem=-1
 				$end 'Sweep'
 				$begin 'Ground'
@@ -6066,7 +6124,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E1'
 					PlotDefinitionId=0
-					VersionID=54
+					VersionID=81
 					SolutionId=203
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -6100,7 +6158,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='E_Vector1'
 					PlotDefinitionId=7
-					VersionID=1
+					VersionID=28
 					SolutionId=203
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -6164,8 +6222,6 @@ $begin 'AnsoftProject'
 							MoveBackwards=false
 							IDMap()
 						$end 'QuantityIDs'
-						SimValue('Mag_E', 1, 154, false, SimValueID=547, 3, 0, 2, 0, false, false, 930, 1, 0, 1, 1, '', 0, 0)
-						SimValue('E_Vector', 1, 154, false, SimValueID=548, 3, 0, 2, 0, false, false, 848, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'PostprocessSweep'
 								Variable='NormalizedDistance'
@@ -6203,6 +6259,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 					$end 'SimDataExtractor'
 				$end 'Solution'
@@ -6212,8 +6298,8 @@ $begin 'AnsoftProject'
 				$begin 'Setup'
 					N='E_Field'
 					V=517
-					Soln(N='AdaptivePass', V=546)
-					Soln(N='LastAdaptive', V=546)
+					Soln(N='AdaptivePass', V=517)
+					Soln(N='LastAdaptive', V=517)
 				$end 'Setup'
 			$end 'Version ID Map'
 			$begin 'ID Map'
@@ -6237,26 +6323,13 @@ $begin 'AnsoftProject'
 		Notes=$begin_cdata$ $end_cdata$
 		$begin 'AnimationSetups'
 		$end 'AnimationSetups'
-		CacheHeaderFile='HDR114E363215999801674.tmp'
+		CacheHeaderFile='HDRJyITuI2839015999710227.tmp'
 	$end 'Maxwell3DModel'
 	$begin 'DataInstances'
 		DesignEditor='TopLevel'
-		Refdes('0', 'U1')
 		Refdes('1', 'U2')
+		Refdes('0', 'U1')
 		$begin 'CompInstances'
-			$begin 'Compinst'
-				ID='0'
-				Status='Status'
-				CompName='Maxwell3DDesign1'
-				GatesInUse()
-				$begin 'Properties'
-					TextProp('ID', 'SRID', '', '0')
-				$end 'Properties'
-				$begin 'Parameters'
-					MenuProp('CoSimulator', 'OHD', '', 'DefaultNetlist', 0)
-					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
-				$end 'Parameters'
-			$end 'Compinst'
 			$begin 'Compinst'
 				ID='1'
 				Status='Status'
@@ -6270,41 +6343,20 @@ $begin 'AnsoftProject'
 					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
 				$end 'Parameters'
 			$end 'Compinst'
-		$end 'CompInstances'
-		$begin 'Instance'
-			DesignEditor='Maxwell3DDesign1'
-			ID='0'
-			$begin 'MaxwellDesignInstance'
-				DesignInstanceID=1
-				$begin 'WindowPosition'
-					$begin 'EditorWindow'
-						Circuit(Editor3d(View(WindowPos(3, -1, -1, -9, -38, 0, 0, 1225, 593), OrientationMatrix(-0.00107932428363711, -0.00173076905775815, 0.00273658684454858, 0, 0.00323797296732664, -0.000576922961045057, 0.000912195479031652, 0, 1.25775345000134e-11, 0.00288461544550955, 0.00182439119089395, 0, 1.4785931057304e-07, 2.38418579101563e-07, -5.40204906463623, 1, 0, -1.95125770568848, 1.95125770568848, -1, 1, 0.279539108276367, 10.5245590209961), Drawings[4: 'Cutout', 'Guide', 'GND', 'VDD'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=20, dYForGrid=20, dZForGrid=20, dRForGrid=20, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
-					$end 'EditorWindow'
-				$end 'WindowPosition'
-				$begin 'ReportSetup'
-					$begin 'ReportManager'
-						$begin 'Reports'
-						$end 'Reports'
-						NextUniqueID=0
-						MoveBackwards=false
-						$begin 'NextVersID'
-							NextUniqueID=0
-							MoveBackwards=false
-						$end 'NextVersID'
-					$end 'ReportManager'
-					$begin 'Reports'
-					$end 'Reports'
-					$begin 'ReportsWindowInfoList'
-					$end 'ReportsWindowInfoList'
-				$end 'ReportSetup'
+			$begin 'Compinst'
+				ID='0'
+				Status='Status'
+				CompName='Maxwell3DDesign1'
+				GatesInUse()
 				$begin 'Properties'
+					TextProp('ID', 'SRID', '', '0')
 				$end 'Properties'
-				$begin 'UserDefinedDocument'
-					$begin 'Data'
-					$end 'Data'
-				$end 'UserDefinedDocument'
-			$end 'MaxwellDesignInstance'
-		$end 'Instance'
+				$begin 'Parameters'
+					MenuProp('CoSimulator', 'OHD', '', 'DefaultNetlist', 0)
+					ButtonProp('CosimDefinition', 'OHD', '', '', 'Edit', 40501, ButtonPropClientData())
+				$end 'Parameters'
+			$end 'Compinst'
+		$end 'CompInstances'
 		$begin 'Instance'
 			DesignEditor='HFSSDesign1'
 			ID='1'
@@ -6312,7 +6364,7 @@ $begin 'AnsoftProject'
 				DesignInstanceID=3
 				$begin 'WindowPosition'
 					$begin 'EditorWindow'
-						Circuit(Editor3d(View(WindowPos(5, -1, -1, -8, -31, 26, 26, 1068, 610), OrientationMatrix(0.545753300189972, -0.0211504679173231, 0.227389231324196, 0, -0.0457606464624405, 0.566994249820709, 0.16255946457386, 0, -0.22374901175499, -0.167553931474686, 0.521407961845398, 0, 889.076477050781, 130.268218994141, 1184.20080566406, 1, 0, 873.58349609375, 909.927856445313, 119.52946472168, 140.746932983398, -5460.58837890625, 3092.18701171875), Drawings[8: 'Cutout', 'Guide', 'GND', 'VDD', 'Cutout_Cross', 'Input', 'Output', 'Rectangle1'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=2, dYForGrid=2, dZForGrid=2, dRForGrid=2, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+						Circuit(Editor3d(View(WindowPos(5, -1, -1, -8, -31, 26, 26, 1068, 610), OrientationMatrix(0.545753300189972, -0.0211504679173231, 0.227389231324196, 0, -0.0457606464624405, 0.566994249820709, 0.16255946457386, 0, -0.22374901175499, -0.167553931474686, 0.521407961845398, 0, 889.076477050781, 130.268218994141, 1184.20080566406, 1, 0, 876.00927734375, 907.502075195313, 119.52946472168, 140.746932983398, -2073.82836914063, -294.5732421875), Drawings[10: 'Cutout', 'Guide', 'GND', 'VDD', 'Cutout_Cross', 'Input', 'Output', 'Mag_E1', 'Rectangle1', 'Mag_E2'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=2, dYForGrid=2, dZForGrid=2, dRForGrid=2, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
 					$end 'EditorWindow'
 				$end 'WindowPosition'
 				$begin 'ReportSetup'
@@ -6540,7 +6592,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6561,7 +6613,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6600,7 +6652,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6651,7 +6703,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6692,26 +6744,6 @@ $begin 'AnsoftProject'
 										$begin 'PlotAttributeStoreMap'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
-													DataSourceID=27
-													$begin 'CartesianGridDescAttribute'
-														ShowXMinor=true
-														ShowYMinor=true
-														ShowXMajor=true
-														ShowYMajor=true
-														ShowBorder=true
-													$end 'CartesianGridDescAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
-													DataSourceID=37
-													$begin 'CurveCartesianAttribute'
-														YAxis='Y1'
-													$end 'CurveCartesianAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
 													DataSourceID=37
 													$begin 'CurveRenderAttribute'
 														$begin 'LineRenderAttribute'
@@ -6735,7 +6767,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6756,7 +6788,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=10
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6786,7 +6818,7 @@ $begin 'AnsoftProject'
 																$begin 'TableFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=8
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -6807,7 +6839,7 @@ $begin 'AnsoftProject'
 																$begin 'TableTitleFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=8
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -6843,6 +6875,14 @@ $begin 'AnsoftProject'
 											$end 'MainMapItem'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
+													DataSourceID=37
+													$begin 'CurveCartesianAttribute'
+														YAxis='Y1'
+													$end 'CurveCartesianAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
 													DataSourceID=1
 													$begin 'LineAxisRenderAttribute'
 														DecimalFieldWidth=3
@@ -6859,7 +6899,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6910,7 +6950,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6961,7 +7001,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7012,7 +7052,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7063,7 +7103,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7114,7 +7154,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7165,7 +7205,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7216,7 +7256,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7267,7 +7307,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7318,7 +7358,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7369,7 +7409,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7420,7 +7460,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7471,7 +7511,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7522,7 +7562,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7573,7 +7613,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7624,7 +7664,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7675,7 +7715,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7726,7 +7766,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7777,7 +7817,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7828,7 +7868,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7879,7 +7919,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7912,6 +7952,18 @@ $begin 'AnsoftProject'
 														NeverCollapse=false
 														AxisStripes=true
 													$end 'LineAxisRenderAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
+													DataSourceID=27
+													$begin 'CartesianGridDescAttribute'
+														ShowXMinor=true
+														ShowYMinor=true
+														ShowXMajor=true
+														ShowYMajor=true
+														ShowBorder=true
+													$end 'CartesianGridDescAttribute'
 												$end 'SubMapItem'
 											$end 'MainMapItem'
 										$end 'PlotAttributeStoreMap'
@@ -8001,19 +8053,6 @@ $begin 'AnsoftProject'
 												$end 'MainMapItem'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
-														DataSourceID=4
-														$begin 'CartesianCurveGroupLayoutAttribute'
-															X_spc=100000000
-															X_fwd=4
-															X_fpr=2
-															Y1_spc=0.05
-															Y1_fwd=3
-															Y1_fpr=2
-														$end 'CartesianCurveGroupLayoutAttribute'
-													$end 'SubMapItem'
-												$end 'MainMapItem'
-												$begin 'MainMapItem'
-													$begin 'SubMapItem'
 														DataSourceID=6
 														$begin 'DockableOverlayLayoutAttribute'
 															$begin 'Dock_0'
@@ -8053,6 +8092,19 @@ $begin 'AnsoftProject'
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
+													$end 'SubMapItem'
+												$end 'MainMapItem'
+												$begin 'MainMapItem'
+													$begin 'SubMapItem'
+														DataSourceID=4
+														$begin 'CartesianCurveGroupLayoutAttribute'
+															X_spc=100000000
+															X_fwd=4
+															X_fpr=2
+															Y1_spc=0.05
+															Y1_fwd=3
+															Y1_fpr=2
+														$end 'CartesianCurveGroupLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
 											$end 'PlotAttributeStoreMap'
@@ -8124,7 +8176,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8145,7 +8197,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8184,7 +8236,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8235,7 +8287,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8276,26 +8328,6 @@ $begin 'AnsoftProject'
 										$begin 'PlotAttributeStoreMap'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
-													DataSourceID=27
-													$begin 'CartesianGridDescAttribute'
-														ShowXMinor=true
-														ShowYMinor=true
-														ShowXMajor=true
-														ShowYMajor=true
-														ShowBorder=true
-													$end 'CartesianGridDescAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
-													DataSourceID=37
-													$begin 'CurveCartesianAttribute'
-														YAxis='Y1'
-													$end 'CurveCartesianAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
 													DataSourceID=37
 													$begin 'CurveRenderAttribute'
 														$begin 'LineRenderAttribute'
@@ -8319,7 +8351,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=14
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8340,7 +8372,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=10
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8370,7 +8402,7 @@ $begin 'AnsoftProject'
 																$begin 'TableFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=8
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -8391,7 +8423,7 @@ $begin 'AnsoftProject'
 																$begin 'TableTitleFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=8
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -8427,6 +8459,14 @@ $begin 'AnsoftProject'
 											$end 'MainMapItem'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
+													DataSourceID=37
+													$begin 'CurveCartesianAttribute'
+														YAxis='Y1'
+													$end 'CurveCartesianAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
 													DataSourceID=1
 													$begin 'LineAxisRenderAttribute'
 														DecimalFieldWidth=3
@@ -8443,7 +8483,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8494,7 +8534,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8545,7 +8585,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8596,7 +8636,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8647,7 +8687,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8698,7 +8738,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8749,7 +8789,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8800,7 +8840,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8851,7 +8891,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8902,7 +8942,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8953,7 +8993,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9004,7 +9044,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9055,7 +9095,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9106,7 +9146,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9157,7 +9197,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9208,7 +9248,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9259,7 +9299,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9310,7 +9350,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9361,7 +9401,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9412,7 +9452,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9463,7 +9503,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=9
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9496,6 +9536,18 @@ $begin 'AnsoftProject'
 														NeverCollapse=false
 														AxisStripes=true
 													$end 'LineAxisRenderAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
+													DataSourceID=27
+													$begin 'CartesianGridDescAttribute'
+														ShowXMinor=true
+														ShowYMinor=true
+														ShowXMajor=true
+														ShowYMajor=true
+														ShowBorder=true
+													$end 'CartesianGridDescAttribute'
 												$end 'SubMapItem'
 											$end 'MainMapItem'
 										$end 'PlotAttributeStoreMap'
@@ -9585,19 +9637,6 @@ $begin 'AnsoftProject'
 												$end 'MainMapItem'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
-														DataSourceID=4
-														$begin 'CartesianCurveGroupLayoutAttribute'
-															X_spc=100000000
-															X_fwd=4
-															X_fpr=2
-															Y1_spc=0.05
-															Y1_fwd=3
-															Y1_fpr=2
-														$end 'CartesianCurveGroupLayoutAttribute'
-													$end 'SubMapItem'
-												$end 'MainMapItem'
-												$begin 'MainMapItem'
-													$begin 'SubMapItem'
 														DataSourceID=6
 														$begin 'DockableOverlayLayoutAttribute'
 															$begin 'Dock_0'
@@ -9637,6 +9676,19 @@ $begin 'AnsoftProject'
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
+													$end 'SubMapItem'
+												$end 'MainMapItem'
+												$begin 'MainMapItem'
+													$begin 'SubMapItem'
+														DataSourceID=4
+														$begin 'CartesianCurveGroupLayoutAttribute'
+															X_spc=100000000
+															X_fwd=4
+															X_fpr=2
+															Y1_spc=0.05
+															Y1_fwd=3
+															Y1_fpr=2
+														$end 'CartesianCurveGroupLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
 											$end 'PlotAttributeStoreMap'
@@ -9697,6 +9749,40 @@ $begin 'AnsoftProject'
 				$end 'UserDefinedDocument'
 			$end 'HfssDesignInstance'
 		$end 'Instance'
+		$begin 'Instance'
+			DesignEditor='Maxwell3DDesign1'
+			ID='0'
+			$begin 'MaxwellDesignInstance'
+				DesignInstanceID=1
+				$begin 'WindowPosition'
+					$begin 'EditorWindow'
+						Circuit(Editor3d(View(WindowPos(3, -1, -1, -8, -31, 0, 0, 1225, 593), OrientationMatrix(0.00081967847654596, 7.0988477091305e-05, 0.000510127109009773, 0, -0.000183496144018136, 0.000936155382078141, 0.000164565499289893, 0, -0.000481249939184636, -0.000236036648857407, 0.000806108815595508, 0, 0.147500395774841, -0.0512935072183609, -5.43206119537354, 1, 0, -0.0146275805309415, 0.332210153341293, -0.159945756196976, 0.052298117429018, 3.97916746139526, 6.88495492935181), Drawings[4: 'Cutout', 'Guide', 'GND', 'VDD'], 'View Data'('Render Mode'=1, 'Show Ruler'=1, 'Coordinate Systems View Mode'=0, 'CS Triad View Mode'=0, 'Render Facets'=1, GridVisible=1, GridAutoAdjust=1, GridAutoExtents=1, GridType='Rect', GridStyle='Line', NumPixels=30, dXForGrid=10, dYForGrid=10, dZForGrid=10, dRForGrid=10, dThetaForGrid=10), ClipPlanes(ClipPlaneOptions(DisableWhenDrawingNewPlane=true, ForceOpqaueForUnclipped=false, ShowClipped=false, Transparency=0, HandleColor=16776960)))))
+					$end 'EditorWindow'
+				$end 'WindowPosition'
+				$begin 'ReportSetup'
+					$begin 'ReportManager'
+						$begin 'Reports'
+						$end 'Reports'
+						NextUniqueID=0
+						MoveBackwards=false
+						$begin 'NextVersID'
+							NextUniqueID=0
+							MoveBackwards=false
+						$end 'NextVersID'
+					$end 'ReportManager'
+					$begin 'Reports'
+					$end 'Reports'
+					$begin 'ReportsWindowInfoList'
+					$end 'ReportsWindowInfoList'
+				$end 'ReportSetup'
+				$begin 'Properties'
+				$end 'Properties'
+				$begin 'UserDefinedDocument'
+					$begin 'Data'
+					$end 'Data'
+				$end 'UserDefinedDocument'
+			$end 'MaxwellDesignInstance'
+		$end 'Instance'
 		$begin 'SODInfo'
 			$begin 'Maxwell3DDesign1'
 				$begin 'CosimDefinition'
@@ -9740,89 +9826,50 @@ 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\
-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'
-	$begin 'DesignInfo'
-		DesignName='Maxwell3DDesign1'
-		Notes=''
-		Factory='Maxwell 3D'
-		IsSolved=false
-		'Nominal Setups'[1: 'E_Field']
-		'Nominal Setup Types'[1: '']
-		'Optimetrics Setups'[0:]
-		'Optimetrics Experiment Types'[0:]
-		Image64='/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE\
-BAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAg\
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCADIAMgDASIAAhEBAxEB/\
-8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQR\
-BRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUp\
-TVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5us\
-LDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAA\
-AECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHB\
-CSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ\
-3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4u\
-Pk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/iiiigAooooAKKKKACiiigAooooAKKKKACivx\
-c/Zt/4LW/Bv9ov4/wCjfBO0+C/xV8IWnxD8R2HhT4Ta7cah4I8ZeNLzWbXQvE1/4z/4XD8GvAviC/17\
-4OaVp+r+GLq3h1ER67pwsJhrviC68M6Ukk6/tHWNDEUcTFzoVFUjFtNq+69bf8Hoc+HxWHxcJTw9VVY\
-xbi2r6NdNUn6dHugooorY6AooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK\
-KAP5i/+CdP/JzH7PX/AF8fET/1UXj2v6dK/mL/AOCdP/JzH7PX/Xx8RP8A1UXj2v6dK8Hh3/cqv/X2X\
-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'
-	$end 'DesignInfo'
+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'
 	$begin 'DesignInfo'
 		DesignName='HFSSDesign1'
 		Notes=''
 		Factory='HFSS'
-		IsSolved=false
+		IsSolved=true
 		'Nominal Setups'[1: 'Setup']
 		'Nominal Setup Types'[1: '']
 		'Optimetrics Setups'[0:]
@@ -10009,5 +10056,119 @@ Wvv1b9W9W/NlwhCCajG193u35tvVvzbYUUUVRYUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFF\
 ABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF\
 FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF\
 FFABRRRQAUUUUAFFFFAH/2Q=='
+	$end 'DesignInfo'
+	$begin 'DesignInfo'
+		DesignName='Maxwell3DDesign1'
+		Notes=''
+		Factory='Maxwell 3D'
+		IsSolved=true
+		'Nominal Setups'[1: 'E_Field']
+		'Nominal Setup Types'[1: '']
+		'Optimetrics Setups'[0:]
+		'Optimetrics Experiment Types'[0:]
+		Image64='/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQE\
+BAQICAQECAQEBAgICAgICAgICAQICAgICAgICAgL/2wBDAQEBAQEBAQEBAQECAQEBAgICAgICAgICAg\
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgL/wAARCADIAMgDASIAAhEBAxEB/\
+8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQR\
+BRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUp\
+TVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5us\
+LDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAA\
+AECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHB\
+CSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ\
+3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4u\
+Pk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD+/iiiigAooooAKKKKACiiigAooooAKKKKACiii\
+gAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACii\
+igAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACi\
+iigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAorzL4n/Gb4X\
+fBnSYNZ+JvjTR/ClreF1021u3nvNb1pobnT7S6XQPDelwT6j4gaCXVLBrkWVrObWK5E9x5UAaQflP8X\
+/8Ago98QPFQm0z4I+Hh8NdDIiJ8a+MrXSdb8cXCj+ybvOneGy93o3hvbPDrFrIbt9dN1a3cc0aaZdJh\
+eHF5jhMEv39X3+kI6zfy6esrLzPNx2bYHLk/rFZe0tdQj703/wBu9L9HJpeZ+0tFfxQ/HPV7P4bHxT+\
+0j4Q+IOu+G/2nPC+s23xO8PfHvWvEWreLPiC/irQtLtNBtvDt9r3i3WJ5Na8J6p4Wtf8AhGD4dvGufD\
+7WOsCzbRriALaSf2O/CTxjrnxE+FXwy+IHifwVq3w18S+Ofh94M8Y+IfhzrxvG1zwBrnibw5putat4K\
+1ptQ0mwuG1bSr+9uLG5M9jZTGawfzbS2fdCmOW5nDMfa8tJ0nSa3d7p7O9lZ+X3N62wynOKea+35aEq\
+DotaN3vF7O6SSd1qtfJvW3oNFFFeoeyFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUV5j8\
+T/jN8LvgxpMGs/E3xppHhS2vDINMtLpri913Wzb3Fha3a+H/DOkwXGpeIWt31Owa6Fja3BtYbgT3HlQ\
+BpB+VPxg/4KO+P/FCzab8FdAX4Z6GfLLeNPGNto+ueOZ1B0q6zp3h0vd6L4b2zw6tbSG6fXjd2l7HNE\
+ml3aYXhxeY4TBL9/V9/pCOs38unrKy8zzsdm2By5P6zWSqdIR96b/7d6X6OTS8z9V/if8Zfhf8ABnSY\
+NZ+JvjTR/ClteGRdMtbp7i81zWmgubC1u18P+GtKgn1HxA1vJqlg1yLK1nNrFcCe48qANIPyo+MH/BR\
+3x/4oWbTPgn4fX4aaGfKLeNPGVtpOt+OJ1H9k3f8AxLvDZe70bw5tnh1e1kN0+um6tbuOaJNMukwv5d\
++L/iPZR6jqHiLxHr2p+KvE9+tuNT8S+JtXvdc1vUDaW8NjZ/btY1a4luLtYrW3t4YhJIViigSJAqKqj\
+2n4KfskftO/tQHTNZ0vQW+F/wALtR+w3Q+InxAtrzS4tU0W7/sC++3eB/CO1dR8YCfw9rpvdOutlloN\
++dOmtxr0Ey7a+cq5tmOYzdHA0nRg+sdZ27uW0V6Wt/Mz5OtnebZrN0Mtoyw9OXWOtS3dz2gvONmv5mj\
+xnxd8Q7KPUr/xH4n1/VPFnie/W3GpeI/E2r3uua3qBtLaGxtPt2r6rcS3F0kVpb20MQeQrFHAkSBUVV\
+HtfwV/ZJ/ad/adOm6xpegn4W/C7UPsN0PiH4/trvTI9T0W7/4R+9+3eCfCQVdR8X+f4e11r3TrrZZ6F\
+fnTprca9bzDFfsV+zv/AME8PgB8BZdK8S32lS/Fj4n2Bsb3/hP/AIgwW2oJpWs2o8P3hvvBHhEK2neE\
+TD4g0EX2nXey816wOoTW/wDbtxC2K+8K6cHw8rqrjqnPJ6uKfX+9L87f+BHXgeFY3VbMarqTerjF3u9\
+/enu/O33n57fB3/gmZ+y78OdEkt/H3grSP2gvEup2ENt4g1r4y6Fo/i3w7PI0egz3kWg/DrVLWfRtE0\
+8a3ohu7KSe31DWbRdRntX1u5gbaf0Joor6OlQo0IqFGmqcV0St9/V+r1PrKGHoYaCp0KUaUF0St973f\
+q7sKKKK1NgooooAKKKKACiiigAooooAKKKKACiivjf40ftl6L8HfircfCC1+CPxt+K/iXT/AIfeD/iT\
+q998Nn+ClpoekaH468R/ELwv4dtLu5+Kfxp8MXFzq0l/8MfFDyR2ltcwxQpAzzh5vLWKlSFKPPUlyx2\
+uZ1atOjHnqy5I3tfXd+h9kUV+VnjH/goT8WtEZ9W039mzwFoHha72/wBi2Xxk/aUn8HfFGbyPstrqP9\
+q+CPhH8DPiFpEO3UpneD+y/FOs7tOntbu+/s65ludOsvANd/4Ki/EX4qeAvDGsfDDwhp3wZOs6DpV34\
+lvtevrHxx4t8PeKUg0WTxV4SsLW90iDTtMuNH8VWnizQ71tR0+8urqOETPY+HtSjktIPPrZxgKEZOVZ\
+ylH7KjK79LpL5tpeZ5eIz7LMNGTnXcpx+zGMuZvsrpLXu2l5n7D/ABN+Mfww+DmlQax8S/GekeFba83\
+/ANm2t09xea3rHkXWnWd2dC8N6XBPqOvC3l1bT2ujZ2s4tIrkT3PlQBpB+VHxj/4KOePPEqS6b8FtET\
+4Z6IwjL+M/GFrpGueOJlC6Td/8S3w8z3ejeHXS5i1e1l+0nXxd2l3HNCNNulwn5Z+NPipbDUNQ1/Xtc\
+1PxR4kvRbf2n4k8Tavea3rN81pa21hZtf6vq1zLPdmKyt7WGIyyttigSJCERVH1H8Hv2CP2oPj60Wre\
+LrZvgJ4Gm84f2p4+0m9l8bXmz+27T/iUfC/7TZ3sIi1bS7SOf+27nQd1nq8Oo6YdUi/dt4VTNMzzKTp\
+YCk6FN9VrK3dz0UF6WfTmZ83VznOM2m6GWUHh6T3cdZ27ym7KCfS1mnpzM+XfGHxMso9R1DxF4h13U/\
+FPia/FsNT8S+J9Xvtc1rUDaQRWVmL7WdXuZbi8WK1hhghEkrLFFDHFGFjVVHs/wU/ZF/af/ahbTNZ0z\
+QW+F/wu1H7Ddj4i/EK2vNMi1PRbv/hH777d4H8IBU1Hxh5/h3XWvdNutlloN8dNmtxr0EwxX7R/Av8A\
+4J4fs0/AnWl8WWHh3VfiP41tdRGo6L4w+LN5pnirU/DUkNxol/p58NaTZaNY6RouoWmq6FBdWmqQ6aN\
+aglvLhE1L7PIIE+466cJw8lL2uNqe0k3flTev+KT1fy+868DwtFS9rmFX2s27uMW9f8Unq79bL/t4+D\
+f2dv8Agnd+z/8AASXSvEt9pUvxZ+KFgbG9HxA+IUFrqCaTrNr/AMI/em+8EeEQrad4Q8nxBoIvtOu/L\
+vNesDfzW5164hbB+8qKK+ipUaVCCp0aapwXRL8+783qfWUaFHDwVOhSVKC6JW+b7vzeoUUUVqahRRRQ\
+AUUUUAFFFFABRRRQAUUUUAFFFFABRXhPxp/aT+DvwCsPO+Ini21tdbuLKS90fwRo6NrfjrxAv2TWLm0\
+GleGLAtOlpcS6FqNvFf3f2XS0uYhDcX0BINfkt8b/APgoN8YPiGmpaN8Ook+BvgecX1mdZE9nrHxV1i\
+wk/t/TvPGqbJLDwN5+n3Wj3Cx6cl7qNjd2Re114A4Hn4zM8Jgk1Vqc1T+SOsvu6fNo8vH5xgcvTVarz\
+VelOPvTfqto/wDbzR+tHxq/aV+DfwBsfO+Ivi61tdcubKS90bwRo8ba5478Qr9l1a4tBpXhewLXCWlx\
+NomoW0d/dC10tLmIQ3N9ATmvwz/an/aR8VftE/EPwv418ORal8FdG8BeCfit8PPDl7DfaLq/jjV9F+K\
+eu+CtQ1nXtQe60y5sPDOrJH8LvAs1jBafbzZSvqCy314Jrc2vxz4i+IWiaNdarq8l1LqOt6teXOo614\
+g1q9n1LWNX1K+up7u5v9U1XUZpJ9QvJby6uHaSeV3Z52O7JxX0T4U/YN/bZ+N3hq/8RaN4V8L/AAxiJ\
+gGi2vx413xL4Cv9cB1HUNP1Hy/DugeDdb1jQfsw06Rz/a2macblL+znsDeWsz3EPzdfH5hm3NQw1F06\
+D3SV5aO65pdNV0tr3Pk6+bZtnE3RwWHdKgmm0oqbdmpJzcly2utrJPZ3Pyh/aL0KD4Xap4e+KnwVu9U\
+1L4wX/iLwl4Wv7nxb4v1vxP4s+K0zX91aaBoniTx/8QviILm/kWy1C6sY73UY9furSz07SrGMWXhnT9\
+St5P0v/ZF/Yj+Nv7Rd/wDFfRotd074Y/D74efGPxdo2t+KvE2mX914nutc+IOk2vx3bTdD+HMdxayzt\
+YL8UfDlndS6hqWlQS22oxajYSXsoudMtfuD4Sf8E1vjv4V1C1uJdO/Zi+HPiDS/tGp2Hxb1nxB8S/2r\
+/Fzag8Wp6UdI0rwdeeAvhHa+BfP0PxFqkM+saVrIeS209dPvNG1E376jYfoP+y3+zV8RvgT4q+Lvinx\
+78X/C3xDPxRtfh2I/D3gT4Va78JvC+i654Ig8XafqvjS90nWfjB4t/t7xrrWgaz4N0q91ESWcx0v4W6\
+DYyfaIbG1W2Mt4eVKvGVag1QkrOKcYxTXM0+VWleTlaTS1stdD6CUc3zpYOPEc6mZ1KFWvVliq9SdTF\
+VPa0sPCNKtXq1JVZ0aP1dOhBRXs5Vq75mp2jqfs/wD7Ev7Pv7OUlvq/g3wrL4g8dW5mK/Ezx7NaeJfH\
+MXnDW7c/2PdrYW9l4QzpGvXmn3H9h2Omf2hZwwpqf22WPzm+tKKK+xp0qdGCp0oKnBdErL8PzPcpUaV\
+CCp0aapU47KKSX4de73fUKKKKs0CiiigAooooAKKKKACiiigAooooAKKKKACivmX42ftd/BD4ETTaR4\
+p8Ry6940h8nPw88Ew2/iHxlH5v9jzA6ram8htPCynTNbtL2E6zeacL21jlbT/tcieUfx9+Nv7eXx++K\
+4udP0LV4PgX4JZI/wDiX+BNYuZ/Gt3IiWczR6t8SpbK3nsng17RZvL/ALFtLBza6xNYalDfQ4mbzcZm\
+uDwd4zqe0qr7EdZX8+kfm722TPIx+d4DL7wqVfa11/y7h70r9pdI9NG721SZ+0vxq/aU+DnwCsTL8Q/\
+Fttb67cWMl7o3gbRUOueO/EK/ZNZubMaV4YsWM0VpczaDqVtFqF59l0pLqIQ3N/AzA1+SPxy/4KHfF3\
+4hR6ponwzhj+C/guYajY/20tzaap8TNWs2HijS/OfXPLksPA/nWr6NKYtLiv8AVdNvrPdDrIRq/NXUv\
+GKXuvS2+lW+q+L/ABl4z114B8moeIPEvjDxN4g1G/8AKt3Ba5v/ABRr99qOpyRiFmupri5nUxQiRwD9\
+0fA//gmv8e/jNJpvif416pJ8FfAt0bO+GhzRQan8Uta02Y6Lf+VD4eErWfgP7To+oanEJ9ZluNV0rU9\
+I8q+8KvG26vCnmGaZpJ08HTeHpPdrf/t6eiXyt8z5mpmuc5zN0cBSeGoPRuPxW/vVHZR06K3zPiDUfF\
+cN5r0kGnQ6p4w8Y+Mtea3BZdQ8Q+JvGHiXX9SvxFbGNnuL/wAUa9e3+rSIsTtcS3FzKPJiErha+u/hd\
+/wTr/ap+NV5bX3j2Gz+BPgq7sLHUU1bxh9l8QeL7y01fS9RvLNNM+HOiaxHPZX8NxFpsOpWniC98P3d\
+iNUDJb3V1a3Nkn7hfAf9lX4Hfs4aesXwy8F2lr4hn08afrPj/W2/t34geIIpYNGTUU1HxPeoZbLTLu9\
+0LT72bStOWx0SO9V7i00y2ZyK+ia7MJw9RhaeLm6097K6XzfxP5cp6GB4Wo07VMdVdepu4xbUfnL4nr\
+25fmfJP7P37Ef7Pn7OMtvrHg3wpL4h8dwGcj4m+PprXxN46i84a3bt/Y94LG3svCG7SNeu9PuP7DsdM\
+/tCzhhXU/tssfnN9bUUV9BTp06UFClBU4LZJWR9TSo0qEFTo01Spx2UUkvw693u+oUUUVZoFFFFABRR\
+RQAUUUUAFFFFABRRRQAUUUUAFFFfE3/BSDwh8YfH37Cv7UPg74Dy/wDFytf+FGu2Vhp0WkT6/qPibwv\
+vtpviT4H8P6LaeH9Tm1PxZr/w1i8XaJo8NvafaH1TX7MW91YTeXf20VJOFOc1FzcE3ZbuyvZeb2RFWb\
+p06lRRc3Ti5WW7sm7LzeyPQPjX+1z8EfgTNPpHijxFNr/jSHyc/DzwRDb+IfGUQl/seYHVrU3kFp4VU\
+6ZrdpewnWb3The2scraf9rkTyj+Q3xp/b1+OXxQjnstH1SP4K+EGCH+x/A2s3LeLbp4v7OuNms/E37N\
+bXcRi1nR7sIuhWukyC21iSy1FdRh/eN/P7pafCnwF4j/AGZp/wBk7XNV1rxZ8SvEPh/w14z+E2lav4g\
+8eeKPHemeJ9FttOivPHXhjwt4hubPT/GmkTaxei30uOzVJdU16aSztng0yWCv3p+Bf/BNT49/GN9M8T\
+/GnVH+Cnge6+w3p0aaKHVfirrmnTf2Hf8AlQeHzK1p4AFzpGoapCs2sSz6rpWo6V5OoeFZYm3V8jVxu\
+a5pN0sLF0aL3UdH/wBvTdvwsn2Z8JWzHOs5m6OCg6GHe6ho0v79R289nFNaOLZ8Kv4itEu7Dw14T0mf\
+VdU1jULXRtG0bSrCW9v9Y1TVLl7DTtL0/SrNJJtW1O6lvYII4AJWuJvLEUIlYA/enwN/4JsfHf4wyaZ\
+4n+NGpyfBfwPdGxvxoc8cWqfFLWtNm/sHUfIj0LzPsvgT7To+oaxb+dq0kuq6VqWk+VfeF5om3V+zPw\
+H/AGVvgd+zjp6Q/DLwXZ2viCbT10/WPH2tEa34/wDEEcttokWpLqHia7j8yx028vPD+m3s+lactjoqX\
+0bXNrpls7mvoiu/B8P0aVp4qXtZ/wAqvy/N6N/gvU9LL+FqFHlqY2ft6n8quo9N3vL5WXqfPHwI/ZX+\
+B/7OWnpD8M/Blna6/Np40/WPHutEa34+8QRy22iRakuoeJbuPzLLTry88P6bez6Xpy2OipfRtc2um2z\
+ua+h6KK+ghCFOKhTioQWySsvuR9TTp06MFTpQVOEdlFJJfJBRRRVFhRRRQAUUUUAFFFFABRRRQAUUUU\
+AFFFFABRRRQAUUUUAFFFFAHlHhT4DfA3wJ458SfE/wP8GfhR4N+JXjL+2P+Ev+IfhT4d+EPDvjnxX/A\
+MJFrFt4h8Qf8JJ4t0jR4b/XPt2v2dpfXn2q4l+1XlrHcz75kVx6vRRSSUVaKSXkKMYxVoxUV5KwUUUU\
+xhRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFF\
+FABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFF\
+FFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAF\
+FFFABRRRQAUUUUAFFFFABRRRQB//9k='
 	$end 'DesignInfo'
 $end 'ProjectPreview'
