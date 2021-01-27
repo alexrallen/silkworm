@@ -1,6 +1,7 @@
 [step, track, map] = load_sim();
 
-sweep = track(track.terminator_name == "term_max_r", :);
+%sweep = track(track.terminator_name == "term_max_r", :);
+sweep = track;
 trapped = sweep(sweep.total_steps > 100, :);
 times = trapped.final_time - trapped.initial_time;
 

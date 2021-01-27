@@ -30,9 +30,6 @@ $begin 'AnsoftProject'
 	$begin 'NexximNetlistEnvironment'
 		Version(1, 0)
 	$end 'NexximNetlistEnvironment'
-	$begin 'EmitEnvironment'
-		Version(1, 0)
-	$end 'EmitEnvironment'
 	$begin 'Maxwell3DEnvironment'
 		Version(1, 0)
 	$end 'Maxwell3DEnvironment'
@@ -45,9 +42,6 @@ $begin 'AnsoftProject'
 	$begin 'MaxCirEnvironment'
 		Version(1, 0)
 	$end 'MaxCirEnvironment'
-	$begin 'SimplorerEnvironment'
-		Version(1, 0)
-	$end 'SimplorerEnvironment'
 	$begin 'IcepakEnvironment'
 		Version(1, 0)
 	$end 'IcepakEnvironment'
@@ -92,8 +86,6 @@ $begin 'AnsoftProject'
 			Symbols(1604, 9001, 10, 103, 1, false, false)
 			Footprints(1604, 9002, 11, 104, 1, false, false)
 			Components(1604, 9000, 8, 102, 1, false, false)
-			Models(1604, 9004, 13, 106, 1, false, false)
-			Packages(1604, 9005, 33502, 107, 1, false, false)
 		$end 'Folders'
 		$begin 'Materials'
 			$begin 'vacuum'
@@ -658,7 +650,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(-6.20259555970465, -2.15875, 2.53744021986631e-16)
+															FcUVMid(-6.20259555970467, -2.15875, 2.53744021986635e-16)
 															$begin 'FcTolVts'
 																TolVt(-7.0485, 0, -2.15875, 0)
 																TolVt(-7.0485, 0, 2.15875, 0)
@@ -709,7 +701,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(6.20259555970471, -2.15875, -2.17109918551429e-15)
+															FcUVMid(6.20259555970466, -2.15875, -1.21242160375046e-15)
 															$begin 'FcTolVts'
 																TolVt(7.0485, 0, 2.15875, 0)
 																TolVt(7.0485, 0, -2.15875, 0)
@@ -3222,6 +3214,8 @@ $begin 'AnsoftProject'
 		$begin 'PortFieldDisplay'
 			$begin 'PortFieldDisplay'
 				ScaleFactor=5
+				Solution='Setup : LastAdaptive'
+				Frequency='18.5GHz'
 			$end 'PortFieldDisplay'
 		$end 'PortFieldDisplay'
 		$begin 'FieldsReporter'
@@ -3231,6 +3225,8 @@ $begin 'AnsoftProject'
 			$begin 'PlotDefaults'
 				Default_SolutionId=51
 				Default_PlotFolder='Automatic'
+				Default_Freq='18.5GHz'
+				Default_Phase='0deg'
 			$end 'PlotDefaults'
 			$begin 'FieldsPlotManagerID'
 				NextUniqueID=2
@@ -3259,7 +3255,7 @@ $begin 'AnsoftProject'
 						FieldValuePrecisionDigits=4
 						dB=false
 						ScaleType=0
-						UserSpecifyValues(16, 0.840929388999939, 182.55419921875, 364.267486572266, 545.980773925781, 727.694030761719, 909.407287597656, 1091.12060546875, 1272.83386230469, 1454.54711914063, 1636.26037597656, 1817.9736328125, 1999.68688964844, 2181.40014648438, 2363.11328125, 2544.82666015625, 2726.53979492188)
+						UserSpecifyValues(16, 0.840929388999939, 182.55419921875, 364.267486572266, 545.980773925781, 727.694030761719, 909.407287597656, 1091.12060546875, 1272.83386230469, 1454.54711914062, 1636.26037597656, 1817.9736328125, 1999.68688964844, 2181.40014648438, 2363.11328125, 2544.82666015625, 2726.53979492188)
 						ValueNumberFormatTypeAuto=0
 						ValueNumberFormatTypeScientific=false
 						ValueNumberFormatWidth=9
@@ -3297,7 +3293,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E1'
 					PlotDefinitionId=0
-					VersionID=38
+					VersionID=50
 					SolutionId=51
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -3331,7 +3327,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E2'
 					PlotDefinitionId=1
-					VersionID=38
+					VersionID=50
 					SolutionId=51
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -3519,6 +3515,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
@@ -3527,6 +3553,8 @@ $begin 'AnsoftProject'
 					ID=56
 					Name='Sweep'
 					$begin 'SimDataExtractor'
+						SimValue('S(1:1,2:1)', 2, 90, false, SimValueID=768, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
+						SimValue('S(1:2,2:2)', 2, 90, false, SimValueID=769, 3, 0, 2, 0, false, false, -1, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'Sweep'
 								Variable='Freq'
@@ -3569,6 +3597,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 						IsPortOnly=false
 					$end 'SimDataExtractor'
@@ -3606,7 +3664,7 @@ $begin 'AnsoftProject'
 		Notes=$begin_cdata$ $end_cdata$
 		$begin 'AnimationSetups'
 		$end 'AnimationSetups'
-		CacheHeaderFile='HDR36141398416000733593.tmp'
+		CacheHeaderFile='HDRuSx4jf2081416000637575.tmp'
 	$end 'HFSSModel'
 	$begin 'Maxwell3DModel'
 		RepRewriteV2=true
@@ -4028,7 +4086,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(-6.20259555970465, -2.15875, 2.53744021986631e-16)
+															FcUVMid(-6.20259555970467, -2.15875, 2.53744021986635e-16)
 															$begin 'FcTolVts'
 																TolVt(-7.0485, 0, -2.15875, 0)
 																TolVt(-7.0485, 0, 2.15875, 0)
@@ -4079,7 +4137,7 @@ $begin 'AnsoftProject'
 														FaceTopol(1, 4, 4, 4)
 														$begin 'FaceGeometry'
 															Area=8.86617710342909
-															FcUVMid(6.20259555970471, -2.15875, -2.17109918551429e-15)
+															FcUVMid(6.20259555970466, -2.15875, -1.21242160375046e-15)
 															$begin 'FcTolVts'
 																TolVt(7.0485, 0, 2.15875, 0)
 																TolVt(7.0485, 0, -2.15875, 0)
@@ -6019,11 +6077,11 @@ $begin 'AnsoftProject'
 					$begin 'Scale3DSettings'
 						unit=154
 						m_nLevels=150
-						minvalue=2801.2206
-						maxvalue=28012206
+						minvalue=280.12205
+						maxvalue=2801220.5
 						log=true
 						IntrinsicMin=0
-						IntrinsicMax=28012206
+						IntrinsicMax=2801220.5
 						LimitFieldValuePrecision=true
 						FieldValuePrecisionDigits=4
 						dB=false
@@ -6051,7 +6109,7 @@ $begin 'AnsoftProject'
 						ArrowMagnitudeThreshold=-0.5
 						ArrowMagnitudeFilteringFlag=false
 						ArrowMinIntrinsicMagnitude=-0.5
-						ArrowMaxIntrinsicMagnitude=28012206.5
+						ArrowMaxIntrinsicMagnitude=2801221
 					$end 'Arrow3DSettings'
 					$begin 'DeformScaleSettings'
 						ShowDeformation=true
@@ -6066,7 +6124,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='Mag_E1'
 					PlotDefinitionId=0
-					VersionID=82
+					VersionID=91
 					SolutionId=203
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -6100,7 +6158,7 @@ $begin 'AnsoftProject'
 					PlotDefinitionType='Mesh_field_type'
 					PlotName='E_Vector1'
 					PlotDefinitionId=7
-					VersionID=29
+					VersionID=38
 					SolutionId=203
 					UserSpecifyName=0
 					UserSpecifyFolder=0
@@ -6164,8 +6222,6 @@ $begin 'AnsoftProject'
 							MoveBackwards=false
 							IDMap()
 						$end 'QuantityIDs'
-						SimValue('Mag_E', 1, 154, false, SimValueID=547, 3, 0, 2, 0, false, false, 930, 1, 0, 1, 1, '', 0, 0)
-						SimValue('E_Vector', 1, 154, false, SimValueID=548, 3, 0, 2, 0, false, false, 848, 1, 0, 1, 1, '', 0, 0)
 						$begin 'Sweeps'
 							$begin 'PostprocessSweep'
 								Variable='NormalizedDistance'
@@ -6203,6 +6259,36 @@ $begin 'AnsoftProject'
 								Increment=0.0872664625997165
 								CreateIndexedSubsweepFlag=false
 							$end 'PostprocessSweep'
+							$begin 'Sweep'
+								Variable='$spacing'
+								Column='0.3175m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$cutout'
+								Column='4m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$gap'
+								Column='0.0043175'
+								Units=''
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$outer'
+								Column='7.0485m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$inner'
+								Column='5.7785m'
+								Units='m'
+							$end 'Sweep'
+							$begin 'Sweep'
+								Variable='$length'
+								Column='600m'
+								Units='m'
+							$end 'Sweep'
 						$end 'Sweeps'
 					$end 'SimDataExtractor'
 				$end 'Solution'
@@ -6237,7 +6323,7 @@ $begin 'AnsoftProject'
 		Notes=$begin_cdata$ $end_cdata$
 		$begin 'AnimationSetups'
 		$end 'AnimationSetups'
-		CacheHeaderFile='HDR36141398416000733594.tmp'
+		CacheHeaderFile='HDR2nspd22081416000637587.tmp'
 	$end 'Maxwell3DModel'
 	$begin 'DataInstances'
 		DesignEditor='TopLevel'
@@ -6506,7 +6592,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6527,7 +6613,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6566,7 +6652,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6617,7 +6703,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6658,26 +6744,6 @@ $begin 'AnsoftProject'
 										$begin 'PlotAttributeStoreMap'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
-													DataSourceID=27
-													$begin 'CartesianGridDescAttribute'
-														ShowXMinor=true
-														ShowYMinor=true
-														ShowXMajor=true
-														ShowYMajor=true
-														ShowBorder=true
-													$end 'CartesianGridDescAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
-													DataSourceID=37
-													$begin 'CurveCartesianAttribute'
-														YAxis='Y1'
-													$end 'CurveCartesianAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
 													DataSourceID=37
 													$begin 'CurveRenderAttribute'
 														$begin 'LineRenderAttribute'
@@ -6701,7 +6767,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6722,7 +6788,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6752,7 +6818,7 @@ $begin 'AnsoftProject'
 																$begin 'TableFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=1
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -6773,7 +6839,7 @@ $begin 'AnsoftProject'
 																$begin 'TableTitleFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=1
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -6809,6 +6875,14 @@ $begin 'AnsoftProject'
 											$end 'MainMapItem'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
+													DataSourceID=37
+													$begin 'CurveCartesianAttribute'
+														YAxis='Y1'
+													$end 'CurveCartesianAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
 													DataSourceID=1
 													$begin 'LineAxisRenderAttribute'
 														DecimalFieldWidth=3
@@ -6825,7 +6899,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6876,7 +6950,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6927,7 +7001,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -6978,7 +7052,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7029,7 +7103,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7080,7 +7154,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7131,7 +7205,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7182,7 +7256,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7233,7 +7307,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7284,7 +7358,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7335,7 +7409,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7386,7 +7460,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7437,7 +7511,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7488,7 +7562,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7539,7 +7613,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7590,7 +7664,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7641,7 +7715,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7692,7 +7766,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7743,7 +7817,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7794,7 +7868,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7845,7 +7919,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -7878,6 +7952,18 @@ $begin 'AnsoftProject'
 														NeverCollapse=false
 														AxisStripes=true
 													$end 'LineAxisRenderAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
+													DataSourceID=27
+													$begin 'CartesianGridDescAttribute'
+														ShowXMinor=true
+														ShowYMinor=true
+														ShowXMajor=true
+														ShowYMajor=true
+														ShowBorder=true
+													$end 'CartesianGridDescAttribute'
 												$end 'SubMapItem'
 											$end 'MainMapItem'
 										$end 'PlotAttributeStoreMap'
@@ -7967,19 +8053,6 @@ $begin 'AnsoftProject'
 												$end 'MainMapItem'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
-														DataSourceID=4
-														$begin 'CartesianCurveGroupLayoutAttribute'
-															X_spc=100000000
-															X_fwd=4
-															X_fpr=2
-															Y1_spc=0.05
-															Y1_fwd=3
-															Y1_fpr=2
-														$end 'CartesianCurveGroupLayoutAttribute'
-													$end 'SubMapItem'
-												$end 'MainMapItem'
-												$begin 'MainMapItem'
-													$begin 'SubMapItem'
 														DataSourceID=6
 														$begin 'DockableOverlayLayoutAttribute'
 															$begin 'Dock_0'
@@ -8019,6 +8092,19 @@ $begin 'AnsoftProject'
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
+													$end 'SubMapItem'
+												$end 'MainMapItem'
+												$begin 'MainMapItem'
+													$begin 'SubMapItem'
+														DataSourceID=4
+														$begin 'CartesianCurveGroupLayoutAttribute'
+															X_spc=100000000
+															X_fwd=4
+															X_fpr=2
+															Y1_spc=0.05
+															Y1_fwd=3
+															Y1_fpr=2
+														$end 'CartesianCurveGroupLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
 											$end 'PlotAttributeStoreMap'
@@ -8090,7 +8176,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8111,7 +8197,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8150,7 +8236,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8201,7 +8287,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8242,26 +8328,6 @@ $begin 'AnsoftProject'
 										$begin 'PlotAttributeStoreMap'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
-													DataSourceID=27
-													$begin 'CartesianGridDescAttribute'
-														ShowXMinor=true
-														ShowYMinor=true
-														ShowXMajor=true
-														ShowYMajor=true
-														ShowBorder=true
-													$end 'CartesianGridDescAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
-													DataSourceID=37
-													$begin 'CurveCartesianAttribute'
-														YAxis='Y1'
-													$end 'CurveCartesianAttribute'
-												$end 'SubMapItem'
-											$end 'MainMapItem'
-											$begin 'MainMapItem'
-												$begin 'SubMapItem'
 													DataSourceID=37
 													$begin 'CurveRenderAttribute'
 														$begin 'LineRenderAttribute'
@@ -8285,7 +8351,7 @@ $begin 'AnsoftProject'
 														$begin 'TitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8306,7 +8372,7 @@ $begin 'AnsoftProject'
 														$begin 'SubtitleFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8336,7 +8402,7 @@ $begin 'AnsoftProject'
 																$begin 'TableFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=1
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -8357,7 +8423,7 @@ $begin 'AnsoftProject'
 																$begin 'TableTitleFontAttrib'
 																	$begin 'FontAttribute'
 																		$begin 'Font'
-																			HeightInPts=1
+																			HeightInPts=-2147483648
 																			Width=0
 																			Escapement=0
 																			Orientation=0
@@ -8393,6 +8459,14 @@ $begin 'AnsoftProject'
 											$end 'MainMapItem'
 											$begin 'MainMapItem'
 												$begin 'SubMapItem'
+													DataSourceID=37
+													$begin 'CurveCartesianAttribute'
+														YAxis='Y1'
+													$end 'CurveCartesianAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
 													DataSourceID=1
 													$begin 'LineAxisRenderAttribute'
 														DecimalFieldWidth=3
@@ -8409,7 +8483,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8460,7 +8534,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8511,7 +8585,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8562,7 +8636,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8613,7 +8687,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8664,7 +8738,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8715,7 +8789,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8766,7 +8840,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8817,7 +8891,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8868,7 +8942,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8919,7 +8993,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -8970,7 +9044,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9021,7 +9095,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9072,7 +9146,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9123,7 +9197,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9174,7 +9248,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9225,7 +9299,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9276,7 +9350,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9327,7 +9401,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9378,7 +9452,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9429,7 +9503,7 @@ $begin 'AnsoftProject'
 														$begin 'TextFont'
 															$begin 'FontAttribute'
 																$begin 'Font'
-																	HeightInPts=1
+																	HeightInPts=-2147483648
 																	Width=0
 																	Escapement=0
 																	Orientation=0
@@ -9462,6 +9536,18 @@ $begin 'AnsoftProject'
 														NeverCollapse=false
 														AxisStripes=true
 													$end 'LineAxisRenderAttribute'
+												$end 'SubMapItem'
+											$end 'MainMapItem'
+											$begin 'MainMapItem'
+												$begin 'SubMapItem'
+													DataSourceID=27
+													$begin 'CartesianGridDescAttribute'
+														ShowXMinor=true
+														ShowYMinor=true
+														ShowXMajor=true
+														ShowYMajor=true
+														ShowBorder=true
+													$end 'CartesianGridDescAttribute'
 												$end 'SubMapItem'
 											$end 'MainMapItem'
 										$end 'PlotAttributeStoreMap'
@@ -9551,19 +9637,6 @@ $begin 'AnsoftProject'
 												$end 'MainMapItem'
 												$begin 'MainMapItem'
 													$begin 'SubMapItem'
-														DataSourceID=4
-														$begin 'CartesianCurveGroupLayoutAttribute'
-															X_spc=100000000
-															X_fwd=4
-															X_fpr=2
-															Y1_spc=0.05
-															Y1_fwd=3
-															Y1_fpr=2
-														$end 'CartesianCurveGroupLayoutAttribute'
-													$end 'SubMapItem'
-												$end 'MainMapItem'
-												$begin 'MainMapItem'
-													$begin 'SubMapItem'
 														DataSourceID=6
 														$begin 'DockableOverlayLayoutAttribute'
 															$begin 'Dock_0'
@@ -9603,6 +9676,19 @@ $begin 'AnsoftProject'
 																$end 'OverlayLayoutAttribute'
 															$end 'Dock_2'
 														$end 'DockableOverlayLayoutAttribute'
+													$end 'SubMapItem'
+												$end 'MainMapItem'
+												$begin 'MainMapItem'
+													$begin 'SubMapItem'
+														DataSourceID=4
+														$begin 'CartesianCurveGroupLayoutAttribute'
+															X_spc=100000000
+															X_fwd=4
+															X_fpr=2
+															Y1_spc=0.05
+															Y1_fwd=3
+															Y1_fpr=2
+														$end 'CartesianCurveGroupLayoutAttribute'
 													$end 'SubMapItem'
 												$end 'MainMapItem'
 											$end 'PlotAttributeStoreMap'
@@ -9824,7 +9910,7 @@ v8AVp9evvD3w28GeHPA2h3uuXVnYafc61d6T4Y021t7jVpLDS9MgkuXjMzw6dBEzlIY1X0GmoylrUen\
 		DesignName='HFSSDesign1'
 		Notes=''
 		Factory='HFSS'
-		IsSolved=false
+		IsSolved=true
 		'Nominal Setups'[1: 'Setup']
 		'Nominal Setup Types'[1: '']
 		'Optimetrics Setups'[0:]
@@ -10016,7 +10102,7 @@ FFABRRRQAUUUUAFFFFAH/2Q=='
 		DesignName='Maxwell3DDesign1'
 		Notes=''
 		Factory='Maxwell 3D'
-		IsSolved=false
+		IsSolved=true
 		'Nominal Setups'[1: 'E_Field']
 		'Nominal Setup Types'[1: '']
 		'Optimetrics Setups'[0:]

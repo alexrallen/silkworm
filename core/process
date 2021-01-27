@@ -2,13 +2,16 @@
 
 import sys
 
+from os import path
+
 from rootpy.tree import Tree
 from rootpy.io import root_open
 
 if len(sys.argv) < 3:
 	print("Syntax: process [ROOT_FILE] [NAME]")
 
-f = root_open(sys.argv[1])
+f = root_open(path.realpath(sys.argv[1]))
+print(path.realpath(sys.argv[1]))
 name = sys.argv[2]
 
 track = f.get('component_track_world_DATA')
